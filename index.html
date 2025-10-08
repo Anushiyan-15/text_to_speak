@@ -1,20 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to voice</title>
+    <title>Text to Voice</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-         <h1>🗣️ Text to Voice</h1>
+        <h1>🗣️ Text to Voice</h1>
         <input type="text" placeholder="Enter the text" id="text"/>
         <br/>
+        <input type="file" id="fileInput">
+        <br/>
         <button onclick="speak()">🔊 Speak</button>
+        <div id="textDisplay"></div>
     </div>
-<script src="script.js">
-    
-</script>
+
+    <!-- PDF.js for PDF reading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
+    <!-- Mammoth.js for DOCX reading -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
