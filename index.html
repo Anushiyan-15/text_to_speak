@@ -6,22 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text to Voice</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
-    <div class="container">
-        <h1>🗣️ Text to Voice</h1>
-        <input type="text" placeholder="Enter the text" id="text"/>
-        <br/>
-        <input type="file" id="fileInput">
-        <br/>
-        <button onclick="speak()">🔊 Speak</button>
-        <div id="textDisplay"></div>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6">
+            <div class="card p-4 shadow-lg"">
+                <h1 class="text-center mb-3">🗣️ Text to Voice</h1>
+                <input type="text" class="form-control mb-3" placeholder="Enter the text" id="text"/>
+                <input type="file" class="form-control mb-3" id="fileInput">
+                <button class="btn btn-primary w-100 mb-3" onclick="speak()">🔊 Speak</button>
+                <div id="textDisplay" class="p-2" style="max-height: 200px; overflow-y: auto;"></div>
+            </div>
+        </div>
     </div>
+</div>
+
 
     <!-- PDF.js for PDF reading -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
     <!-- Mammoth.js for DOCX reading -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script.js"></script>
 </body>
